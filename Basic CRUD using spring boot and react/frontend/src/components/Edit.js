@@ -34,13 +34,13 @@ export default function Edit() {
             e.preventDefault();
             
             const data = {
-                'id':id,
+                // 'id':id,
                 'name':name,
                 'author':author,
                 'price':price
               };
               axios
-              .put(`${base_url}/book/`, +tid)
+              .put(`${base_url}/book/`+tid, data)
               .then((response) => {
                 setName("");
                 setAuthor("");
